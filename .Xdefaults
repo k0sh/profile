@@ -1,0 +1,38 @@
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.hintstyle: hintfull
+Xft.rgba: 1
+
+XTerm*geometry:120x40
+XTerm*scrollBar: false
+XTerm*background: black
+XTerm*foreground: green
+XTerm*font: -xos4-terminus-medium-r-normal-*-*-160-*-*-*-*-iso10646-1
+
+URxvt*font: -xos4-terminus-medium-r-normal-*-*-160-*-*-*-*-iso10646-1
+URxvt*geometry:120x40
+URxvt*background: #323d4c
+URxvt*foreground: cyan
+URxvt*scrollBar: false
+URxvt.tabbed.tabbar-bg: 81
+URxvt.tabbed.tabbar-fg: 14
+URxvt.tabbed.tab-bg: 6
+URxvt.tabbed.tab-fg: 81
+
+
+!URxvt*inheritPixmap:    	true
+!URxvt*reverseVideo:		false
+!URxvt*tintColor:        	#dfdfdf
+!URxvt*shading:		100		!trans, 0=opaque    
+URxvt*fading:		10		!term unfocus      
+URxvt*saveLines:	5500
+URxvt*cursorColor:	#d8d8d8
+URxvt*colorBD:		lightyellow
+URxvt*colorUL:		yellow   
+
+URxvt*perl-ext:		tabbed
+URxvt*pastableTabs:	true
+URxvt*scrollstyle:	plain
+
+

@@ -1,0 +1,2 @@
+ENTRY "flash" URL "/media/disk"
+ENTRY "MyBook" URL "/media/MyBook"
