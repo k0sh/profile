@@ -371,67 +371,6 @@
 59=[A
 
 [Dir Hist New Left Panel]
-<<<<<<< HEAD:.mc/history
-0=/home/renat/projects
-1=/home/renat/inbox/scills/ajax
-2=/home/renat/inbox/scills/art
-3=/home/renat/inbox/scills/c
-4=/home/renat/inbox/scills/english
-5=/home/renat/inbox/scills/java
-6=/home/renat/inbox/scills/linux/ALP-listings
-7=/home/renat/inbox/scills/linux/LDD
-8=/home/renat/inbox/scills/linux
-9=/home/renat/inbox/scills/other/Прикладная криптография
-10=/home/renat/inbox/scills/other
-11=/home/renat/inbox/scills/python
-12=/home/renat/inbox/scills/tools
-13=/home/renat/inbox/scills
-14=/home/renat/inbox/Dropbox/xcom
-15=/home/renat/inbox/Dropbox/Private/doc
-16=/home/renat/inbox/Dropbox/Private/tmp
-17=/home/renat/inbox/Dropbox/Private/wm
-18=/home/renat/inbox/Dropbox/Photos
-19=/home/renat/inbox/Dropbox/jZamok
-20=/home/renat/inbox/Dropbox/eBooks
-21=/home/renat/inbox/Dropbox/Public
-22=/home/renat/inbox/Dropbox/Private
-23=/home/renat/Photos/2004/07/28
-24=/home/renat/Photos/2004/07
-25=/home/renat/Photos/2004
-26=/home/renat/Photos/2009/09/11
-27=/home/renat/Photos/2009/09
-28=/home/renat/Photos/2009
-29=/home/renat/Photos/2007
-30=/home/renat/Photos
-31=/home
-32=/
-33=/media/MyBook/video/ipod
-34=/media/MyBook/video
-35=/media
-36=/media/MyBook/$RECYCLE.BIN/S-1-5-20
-37=/media/MyBook/$RECYCLE.BIN/S-1-5-21-1041703366-279948890-1552607848-1000
-38=/media/MyBook/$RECYCLE.BIN
-39=/media/MyBook/System Volume Information
-40=/media/MyBook/WOW
-41=/media/MyBook/WindowsImageBackup
-42=/media/MyBook/audiobooks
-43=/media/MyBook/backup
-44=/media/MyBook
-45=/media/MyBook/doc
-46=/media/MyBook/doc/ebooks/Tanenbaum
-47=/media/MyBook/doc/ebooks
-48=/media/MyBook/doc/ebooks/art/Knutt/Сортировка и поиск.Том 3
-49=/media/MyBook/doc/ebooks/art/Knutt/Получисленные алгоритмы.Том 2
-50=/media/MyBook/doc/ebooks/art/Knutt
-51=/media/MyBook/doc/ebooks/art/ThinkingInPatterns
-52=/media/MyBook/doc/ebooks/art
-53=/home/renat/inbox/4read
-54=/home/renat/inbox/Dropbox
-55=/home/renat/inbox/flv
-56=/home/renat/inbox
-57=/home/renat/.dropbox
-58=/home/renat/.dropbox-dist
-=======
 0=/home/renat/projects/redut/old
 1=/home/renat/projects/redut/tmp
 2=/home/renat/projects/wimax/apps
@@ -480,18 +419,18 @@
 45=/home/renat/projects/redut/src
 46=/home/renat/projects/redut/src/agent
 47=/home/renat/private
-48=/home/renat
-49=/home/renat/local
-50=/home/renat/local/auriga
-51=/home/renat/local/auriga/hw10_sem/bneck
-52=/home/renat/local/auriga/hw10_sem/lesson10_code.tgz#utar/lesson10_code/mq_attr
-53=/home/renat/local/auriga/hw10_sem/lesson10_code.tgz#utar/lesson10_code/mq_send
-54=/home/renat/local/auriga/hw10_sem/lesson10_code.tgz#utar/lesson10_code
-55=/home/renat/local/auriga/hw10_sem/lesson10_code.tgz#utar
-56=/home/renat/local/auriga/hw10_sem
-57=/home/renat/local/auriga/hw10_sem/bneck.debug
-58=/home/renat/projects/redut
-59=/home/renat/projects/redut/dist
+48=/home/renat/local
+49=/home/renat/local/auriga
+50=/home/renat/local/auriga/hw10_sem/bneck
+51=/home/renat/local/auriga/hw10_sem/lesson10_code.tgz#utar/lesson10_code/mq_attr
+52=/home/renat/local/auriga/hw10_sem/lesson10_code.tgz#utar/lesson10_code/mq_send
+53=/home/renat/local/auriga/hw10_sem/lesson10_code.tgz#utar/lesson10_code
+54=/home/renat/local/auriga/hw10_sem/lesson10_code.tgz#utar
+55=/home/renat/local/auriga/hw10_sem
+56=/home/renat/local/auriga/hw10_sem/bneck.debug
+57=/home/renat/projects/redut
+58=/home/renat/projects/redut/dist
+59=/home/renat
 
 [Dir Hist New Right Panel]
 0=/media/MyBook/install
@@ -553,5 +492,4 @@
 56=/home/renat/projects/redut/build/net-snmp-5.4.2.1/agent
 57=/home/renat/projects/redut/build/net-snmp-5.4.2.1/agent/mibgroup
 58=/home/renat/projects/redut/build/net-snmp-5.4.2.1/agent/mibgroup/examples
->>>>>>> 2bcc307b61c6179a1ab5047225938415614d625c:.mc/history
 59=/home/renat
