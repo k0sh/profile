@@ -91,7 +91,6 @@ set tags=./.tags,./tags,~/.vim/kerneltags
 " For Python
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 set tags+=$HOME/.vim/tags/python.ctags
-let ropevim_vim_completion=1
 
 " Always visible n rows
 set t_Co=256
@@ -191,8 +190,8 @@ map cx v:s!^\s*//!!g <CR>v=<CR>
 
 " Exit and Close 
 map <C-q> :qa<CR>
-map <silent> <C-w> :close<CR>
-imap <silent> <C-w> <Esc>:close<CR>
+map <silent> <C-w> :bd<CR>
+imap <silent> <C-w> <Esc>:bd<CR>
 
 " Save action
 map <silent> <C-s> :w<CR>

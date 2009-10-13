@@ -22,7 +22,7 @@ hi ModeMsg term=bold cterm=bold gui=bold
 hi StatusLine term=reverse,bold cterm=reverse,bold gui=reverse,bold
 hi StatusLineNC term=reverse cterm=reverse gui=reverse
 hi VertSplit term=reverse cterm=reverse gui=reverse
-hi Visual term=reverse ctermbg=black guibg=grey60
+hi Visual cterm=reverse ctermbg=LightGray guibg=grey60
 hi VisualNOS term=underline,bold cterm=underline,bold gui=underline,bold
 hi DiffText term=reverse cterm=bold ctermbg=Red gui=bold guibg=Red
 hi Cursor guibg=Green guifg=Black
@@ -48,6 +48,7 @@ hi CursorLine term=underline cterm=underline guibg=grey40
 hi String	guifg=#60ff60
 hi Number	guifg=cyan
 hi Error	gui=undercurl guisp=Red guibg=grey20
+hi TODO		guifg=LightGray guibg=grey40
 
 " Groups for syntax highlighting
 hi Constant term=underline ctermfg=Magenta guifg=#ffa0a0 guibg=grey5

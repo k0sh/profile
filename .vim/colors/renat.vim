@@ -39,7 +39,7 @@ hi ErrorMsg		ctermfg=white ctermbg=red	guifg=lightRed
 hi WarningMsg	ctermfg=cyan		guifg=lightYellow
 hi ModeMsg		ctermfg=yellow		guifg=yellow
 hi MoreMsg		ctermfg=yellow		guifg	=yellow
-hi Error		ctermfg=white ctermbg=red		guifg=red
+hi Error		ctermfg=white ctermbg=red gui=undercurl	guisp=Red
 
 hi Todo			ctermfg=black	ctermbg=darkYellow	guifg=darkYellow
 hi Cursor		ctermfg=black	ctermbg=white		guifg=black

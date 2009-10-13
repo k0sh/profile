@@ -1,6 +1,6 @@
 " 1.2 (created: 2008/08/16 18:51:52)
 " Mappings
-map h H
+map <BS> :back<CR>
 
 " Options
 set guioptions=Br

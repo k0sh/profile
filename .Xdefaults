@@ -8,13 +8,31 @@ XTerm*geometry:120x40
 XTerm*scrollBar: false
 XTerm*background: black
 XTerm*foreground: green
-XTerm*font: -xos4-terminus-medium-r-normal-*-*-160-*-*-*-*-iso10646-1
+!XTerm*font: -xos4-terminus-medium-r-normal-*-*-160-*-*-*-*-iso10646-1
 
+XTerm.title "Hello World"
+XTerm.geometry:120x40
+XTerm.scrollBar: false
+XTerm.background: black
+XTerm.foreground: green
+!XTerm.font: -xos4-terminus-medium-r-normal-*-*-160-*-*-*-*-iso10646-1
+
+!URxvt*depth: 32
+!URxvt*transparent: true
+!URxvt*fading: 10
+!URxvt*fadeColor: [0]black
+!URxvt*background: rgba:0000/0000/0000/bbbb
+
+!URxvt*termName: rxvt-256color
 URxvt*font: -xos4-terminus-medium-r-normal-*-*-160-*-*-*-*-iso10646-1
-URxvt*geometry:120x40
+URxvt*geometry:140x60
 URxvt*background: #323d4c
-URxvt*foreground: cyan
+!URxvt*background: #0f1119 
+!URxvt*background: black
+!URxvt*foreground: green
+Rxvt*foreground: #7a8199
 URxvt*scrollBar: false
+
 URxvt.tabbed.tabbar-bg: 81
 URxvt.tabbed.tabbar-fg: 14
 URxvt.tabbed.tab-bg: 6
@@ -28,11 +46,12 @@ URxvt.tabbed.tab-fg: 81
 URxvt*fading:		10		!term unfocus      
 URxvt*saveLines:	5500
 URxvt*cursorColor:	#d8d8d8
-URxvt*colorBD:		lightyellow
-URxvt*colorUL:		yellow   
+!URxvt*colorBD:		lightyellow
+!URxvt*colorUL:		yellow   
 
 URxvt*perl-ext:		tabbed
 URxvt*pastableTabs:	true
 URxvt*scrollstyle:	plain
 
+VIM*geometry: 130x30
 
