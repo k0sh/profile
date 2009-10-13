@@ -56,14 +56,6 @@ inoremap <S-F3> <Esc><S-v>
 nnoremap <F3> v
 nnoremap <S-F3> <S-v>
 
-" Close window
-"map <silent> <F4> :close<CR>
-"imap <silent> <F4> <Esc>:close<CR>
-
-" Close buffer
-"map <silent> <C-F4> :bd<CR>
-"imap <silent> <C-F4> <Esc>:bd<CR>
-
 " Error broswer
 map <F5> :cclose<CR>
 map <F6> :cope<CR>
@@ -120,11 +112,6 @@ map g<Right>	:<C-]>
 " Comment selected code as //
 map cc v:s!^!//!g <CR><CR>
 map cx v:s!^\s*//!!g <CR>v=<CR>
-
-" Exit and Close 
-map <C-q> :qa<CR>
-map <silent> <C-w> :close<CR>
-imap <silent> <C-w> <Esc>:close<CR>
 
 " Save action
 map <silent> <C-s> :w<CR>

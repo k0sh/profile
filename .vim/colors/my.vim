@@ -17,11 +17,11 @@ let colors_name = "darkblue"
 hi Normal		guifg=white guibg=#000060	ctermfg=gray ctermbg=black
 hi ErrorMsg		guifg=#ffffff guibg=#287eff	ctermfg=white ctermbg=lightblue
 hi Error                gui=undercurl guisp=Red guibg=#000060
-hi Visual		guifg=#8080ff guibg=fg		gui=reverse	ctermfg=lightblue ctermbg=fg cterm=reverse
-hi VisualNOS		guifg=#8080ff guibg=fg		gui=reverse,underline	ctermfg=lightblue ctermbg=fg cterm=reverse,underline
-hi Todo			guifg=#d14a14 guibg=#1248d1						ctermfg=red	ctermbg=darkblue
-hi Search		guifg=#90fff0 guibg=#2050d0						ctermfg=white ctermbg=darkblue cterm=underline term=underline
-hi IncSearch		guifg=#b0ffff guibg=#2050d0							ctermfg=darkblue ctermbg=gray
+hi Visual		guifg=#8080ff guibg=fg	gui=reverse ctermfg=lightblue ctermbg=fg cterm=reverse
+hi VisualNOS		guifg=#8080ff guibg=fg	gui=reverse,underline	ctermfg=lightblue ctermbg=fg cterm=reverse,underline
+hi Todo			guifg=#d14a14 guibg=#1248d1	ctermfg=red	ctermbg=darkblue
+hi Search		guifg=#90fff0 guibg=#2050d0	ctermfg=white ctermbg=darkblue cterm=underline term=underline
+hi IncSearch		guifg=#b0ffff guibg=#2050d0	ctermfg=darkblue ctermbg=gray
 
 hi SpecialKey		guifg=cyan			ctermfg=darkcyan
 hi Directory		guifg=cyan			ctermfg=cyan
@@ -48,7 +48,6 @@ hi DiffText	cterm=bold ctermbg=red gui=bold guibg=Red
 
 hi Cursor	guifg=black guibg=lightGreen ctermfg=black ctermbg=yellow
 hi lCursor	guifg=black guibg=white ctermfg=black ctermbg=white
-
 
 hi Comment	guifg=#b0b0b0 ctermfg=darkred
 hi Constant	ctermfg=magenta guifg=#ffa0a0 cterm=none
