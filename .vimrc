@@ -118,6 +118,8 @@ imap <S-F1> <Esc><c-w>]
 "inoremap <F2> <Esc>:w<CR>
 "nnoremap <F2> :w<CR>
 
+imap <S-Tab> <BS>
+
 " Selection
 inoremap <F3> <Esc>lv
 inoremap <S-F3> <Esc><S-v>
@@ -141,6 +143,7 @@ map <F8> :cn<CR>
 " Make key
 imap <F9> <Esc>:wa<CR>:make<CR>
 nmap <F9> :wa<CR>:make<CR>
+" Rebuild
 imap <C-F9> <Esc>:wa<CR>:make<Space>clean<CR>:make<CR>
 nmap <C-F9> :wa<CR>:make<Space>clean<CR>:make<CR>
 
