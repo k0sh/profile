@@ -59,6 +59,9 @@
 .nautilus
 .gnome2
 .dia
+.ssh
+.purple
+.mozilla
 .gconf
 .evolution
 .dropbox-dist*
