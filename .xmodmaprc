@@ -1,4 +1,0 @@
-clear mod4
-keycode 115 = Super_L
-keycode 116 = Super_R
-add mod4 = Super_R Super_L
