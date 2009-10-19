@@ -1,9 +1,3 @@
-Xft.dpi: 96
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.hintstyle: hintfull
-Xft.rgba: 1
-
 XTerm*geometry:120x40
 XTerm*scrollBar: false
 XTerm*background: black
