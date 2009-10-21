@@ -7,6 +7,7 @@
 .adobe
 .bash_logout
 .bash_history
+.bazaar
 .cache
 .config
 .crypt
@@ -22,6 +23,7 @@
 .gitconfig
 .imsettings.log
 .icedteaplugin
+.htoprc
 .pulse-cookie
 .vimperator
 .wine
@@ -52,6 +54,7 @@
 .dropbox
 .kde
 .local
+.mc/history
 .pulse
 .netx
 .java
@@ -61,6 +64,7 @@
 .dia
 .ssh
 .purple
+.pki
 .mozilla
 .gconf
 .evolution
