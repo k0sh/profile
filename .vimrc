@@ -90,7 +90,7 @@ set tags=./.tags,./tags,~/.vim/kerneltags
 
 " For Python
 autocmd FileType python set omnifunc=pythoncomplete#Complete
-set tags+=$HOME/.vim/tags/python.ctags
+let ropevim_vim_completion=1
 
 " Always visible n rows
 set t_Co=256

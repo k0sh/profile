@@ -1,4 +1,14 @@
 .Ephox
+.cabal
+.bluetilegreet
+.mc/history
+.bazaar
+.pki
+.mplayer
+.netbeans-*
+.gwibber
+.ghc
+.ipython
 .ICEauthority
 .FBReader
 .AbiSuite
