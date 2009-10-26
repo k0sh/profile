@@ -26,7 +26,7 @@ autocmd BufNewFile *.h call New_Header_C_File()
 autocmd BufWritePost *.c,*.h silent !ctags -a -f .tags <afile>
 
 " Python support indent
-autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab ai
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 autocmd InsertEnter * set cursorline
 autocmd InsertLeave * set nocursorline
