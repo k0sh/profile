@@ -75,7 +75,7 @@ editor_highlight=3
 equal_split=1
 first_panel_size=79
 =======
-first_panel_size=79
+first_panel_size=76
 message_visible=0
 keybar_visible=0
 xterm_title=0
@@ -88,7 +88,7 @@ filetype_mode=1
 free_space=1
 
 [Dirs]
-other_dir=/home/renat/projects/werber/daemon
+other_dir=/home/renat
 current_is_left=1
 
 [New Left Panel]
