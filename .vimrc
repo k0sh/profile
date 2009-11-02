@@ -29,6 +29,9 @@ autocmd BufWritePost *.c,*.h silent !ctags -a -f .tags <afile>
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab ai
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
+" HTML indent
+autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab ai
+
 autocmd InsertEnter * set cursorline
 autocmd InsertLeave * set nocursorline
 
