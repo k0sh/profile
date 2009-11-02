@@ -27,6 +27,7 @@ autocmd BufWritePost *.c,*.h silent !ctags -a -f .tags <afile>
 
 " Python support indent
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab ai
+autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 autocmd InsertEnter * set cursorline
 autocmd InsertLeave * set nocursorline
@@ -89,8 +90,7 @@ set cindent		" C format indent
 set tags=./.tags,./tags,~/.vim/kerneltags
 
 " For Python
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-set tags+=$HOME/.vim/tags/python.ctags
+let ropevim_vim_completion=1
 
 " Always visible n rows
 set t_Co=256
