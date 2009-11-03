@@ -28,6 +28,7 @@ autocmd BufWritePost *.c,*.h silent !ctags -a -f .tags <afile>
 " Python support
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab ai
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+let python_highlight_all = 1
 
 " HTML support
 autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab ai
