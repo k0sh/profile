@@ -25,12 +25,15 @@ autocmd BufNewFile *.h call New_Header_C_File()
 " For C files update tags after save
 autocmd BufWritePost *.c,*.h silent !ctags -a -f .tags <afile>
 
-" Python support indent
+" Python support
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab ai
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
-" HTML indent
+" HTML support
 autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab ai
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 autocmd InsertEnter * set cursorline
 autocmd InsertLeave * set nocursorline
