@@ -21,7 +21,7 @@ limit -s
 
 umask 022
 
-export PATH=~/bin:/opt/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin
+export PATH=~/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin
 if [ -x /usr/libexec/path_helper ]; then
     eval `/usr/libexec/path_helper -s`
 fi
@@ -188,25 +188,6 @@ function lowercase()
     zmv "($1)" '${(L)1}'
 }
 
-function isomake()
-{
-	if [ -z "$1" ]; then
-		echo "isomake: first parameter - iso-file name"
-		echo "isomake: second parameter - input dir/file name"
-	else
-		mkisofs -v -J -r -o $1 $2
-	fi
-}
-
-function apt-show()
-{
-    if [ -z "$1" ]; then
-        echo "First argument - name of package"
-    else
-        apt-cache show $1|egrep --color -v \(^Size\|^MD5sum\|^Filename\|^Suggests\|^SHA\|^Architecture\|^Maintainer\|^Section\|^Priority\)
-    fi
-}
-
 # tail -f, possibly colorized
 function t()
 {
@@ -230,22 +211,6 @@ function ram()
     fi
 }
 
-function split2flac {
-    if [ -z "$2" ]; then
-        echo "Usage: split2flac cue-file sound-file"
-    else
-        cuebreakpoints $1 | shnsplit -o flac $2
-        cuetag $1 split-track*.flac
-    fi
-}
-
-function myeditor {
-    if [ -z `ps -C emacs -o pid=` ]; then
-        vim ${@}
-    else
-        emacsclient -t -c ${@}
-    fi
-}
 
 function gkill {
     awk '{print $2}'|xargs kill
@@ -283,7 +248,7 @@ else
 fi
 ## color ls
 if [ `uname` = "Linux" ]; then
-        alias ls="/bin/ls --color"
+        alias ls="/bin/ls --color --group-directories-first"
 else
         alias ls="/bin/ls -G"
 fi
@@ -293,6 +258,7 @@ if [ `uname` != "Linux" -a -x "`whence -c gfind`" ]; then
 else
     alias find="noglob find"
 fi
+
 ## Editor
 if [ -x "`whence -c emacsclient`" ]; then
     alias e="emacsclient --no-wait"
@@ -341,13 +307,8 @@ alias cal="cal -m"
 alias apt="noglob sudo apt-get"
 alias wa="wajig"
 alias s="sudo"
-function mq() { hg --cwd $(hg root)/.hg/patches/ $@ }
-function qser() { vim $(hg root)/.hg/patches/series }
-function tran() { sdcv -u 'Universal (Ru-En)' -u 'LingvoUniversal (En-Ru)' $1 | sed "s/&apos;\|'//g" }
 
 alias psc="ps -C"
 alias psfg="ps -ylfC"
 function psk() { ps -C $1 -o pid= | xargs kill }
 
-# for emacs' tramp
-[ $TERM = "dumb" ] && unsetopt zle && PS1='$ ' && unalias ls || return 0
