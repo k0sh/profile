@@ -60,7 +60,7 @@ myWorkspaces    = ["main","devel","media","internet","5","6","7","8","9"]
 -- Border colors for unfocused and focused windows, respectively.
 --
 myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#00ee00"
+myFocusedBorderColor = "#009900"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -69,6 +69,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
     -- launch a terminal
     [ ((controlMask .|. mod1Mask, xK_t ), spawn $ XMonad.terminal conf)
+
+    -- launch Vim
+    , ((controlMask .|. mod1Mask, xK_x ), spawn "ixterm.sh")
 
     -- launch Vim
     , ((controlMask .|. mod1Mask, xK_v ), spawn "gvim")
