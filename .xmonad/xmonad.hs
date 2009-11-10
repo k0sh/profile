@@ -9,6 +9,7 @@
 
 import XMonad
 import XMonad.Config.Gnome
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.NoBorders
@@ -258,11 +259,12 @@ main =
 	, modMask            = myModMask
 	, keys               = myKeys
 	, startupHook        = startupHook gnomeConfig >> setWMName "LG3D"
-	, manageHook         = myManageHook <+> manageDocks
+	, manageHook         = manageHook gnomeConfig <+> myManageHook
         , workspaces         = myWorkspaces
         , normalBorderColor  = myNormalBorderColor
         , focusedBorderColor = myFocusedBorderColor
-        , layoutHook         = avoidStruts myLayout
+        , layoutHook         = ewmhDesktopsLayout $ avoidStruts myLayout
+	, logHook	     = ewmhDesktopsLogHook
 	}
 
 -- A structure containing your configuration settings, overriding
