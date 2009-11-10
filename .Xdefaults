@@ -43,8 +43,8 @@ URxvt*cursorColor:	#d8d8d8
 !URxvt*colorBD:		lightyellow
 !URxvt*colorUL:		yellow   
 
-URxvt*perl-ext:		tabbed
-URxvt*pastableTabs:	true
+!URxvt*perl-ext:		tabbed
+!URxvt*pastableTabs:	true
 URxvt*scrollstyle:	plain
 
 VIM*geometry: 130x30
