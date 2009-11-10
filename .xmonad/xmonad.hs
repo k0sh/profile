@@ -8,8 +8,13 @@
 --
 
 import XMonad
-import XMonad.Config.Desktop
 import XMonad.Config.Gnome
+import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.SetWMName
+import XMonad.Layout.NoBorders
+import XMonad.Layout.IM
+import XMonad.Layout.PerWorkspace
+
 import System.Exit
 
 import qualified XMonad.StackSet as W
@@ -55,7 +60,7 @@ myNumlockMask   = mod2Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = ["main","devel","media","internet","5","6","7","8","9"]
+myWorkspaces    = ["main","devel","media","internet","im","misc"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -172,7 +177,8 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = tiled ||| Mirror tiled ||| Full
+myLayout = smartBorders $ onWorkspace "im" (gridIM 0.25 pidginRoster) $ 
+	tiled ||| Mirror tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -185,6 +191,9 @@ myLayout = tiled ||| Mirror tiled ||| Full
 
      -- Percent of screen to increment by when resizing panes
      delta   = 3/100
+
+     -- Pidgin Roster
+     pidginRoster = And (ClassName "Pidgin") (Role "buddy_list")
 
 ------------------------------------------------------------------------
 -- Window rules:
@@ -205,6 +214,7 @@ myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , className =? "Firefox"        --> doF(W.shift "internet")
+    , className =? "Pidgin"         --> doF(W.shift "im")
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
@@ -243,14 +253,16 @@ myStartupHook = return ()
 -- main = do spawn "xterm -e '/usr/bin/man xmonad'"
 --          xmonad defaults
 main = 
-          xmonad gnomeConfig
-	{ terminal = myTerminal
-	, modMask = myModMask
-	, keys = myKeys
-	, manageHook = myManageHook <+> manageHook gnomeConfig
+        xmonad gnomeConfig
+	{ terminal           = myTerminal
+	, modMask            = myModMask
+	, keys               = myKeys
+	, startupHook        = startupHook gnomeConfig >> setWMName "LG3D"
+	, manageHook         = myManageHook <+> manageDocks
         , workspaces         = myWorkspaces
         , normalBorderColor  = myNormalBorderColor
         , focusedBorderColor = myFocusedBorderColor
+        , layoutHook         = avoidStruts myLayout
 	}
 
 -- A structure containing your configuration settings, overriding
