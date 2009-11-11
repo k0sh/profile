@@ -7,6 +7,9 @@ fi
 
 EDITOR=gvim
 
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
 # User specific aliases and functions
 alias cal="cal -m"
 alias ls="ls --color=auto --group-directories-first"
