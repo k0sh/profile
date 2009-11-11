@@ -179,7 +179,7 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- which denotes layout choice.
 --
 myLayout = smartBorders $ onWorkspace "im" (gridIM 0.25 pidginRoster) $ 
-	tiled ||| Mirror tiled ||| Full
+	Mirror tiled ||| tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
