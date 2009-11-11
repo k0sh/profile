@@ -1,0 +1,8 @@
+SHELL=/bin/bash
+MAILTO=renat
+HOME=/home/renat
+PATH=/bin:/usr/bin
+DISPLAY=:0.0
+
+# Check hourly modified repository files 
+*/15 11-19 * * 1-5 $HOME/bin/homepro.sh
