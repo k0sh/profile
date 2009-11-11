@@ -1,7 +1,7 @@
 " 1.2 (created: 2008/08/16 18:51:52)
 " Mappings
 map <BS> :back<CR>
-map s :bmarks
+map s :bmarks! -tags=
 
 " Options
 set guioptions=Br
