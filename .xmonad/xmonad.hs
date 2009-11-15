@@ -12,6 +12,7 @@ import XMonad.Config.Gnome
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.SetWMName
+import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.NoBorders
 import XMonad.Layout.IM
 import XMonad.Layout.PerWorkspace
@@ -217,7 +218,9 @@ myManageHook = composeAll
     , className =? "Firefox"        --> doF(W.shift "internet")
     , className =? "Pidgin"         --> doF(W.shift "im")
     , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore ]
+    , resource  =? "kdesktop"       --> doIgnore 
+    , composeOne [isFullscreen -?> doFullFloat, transience]
+    ]
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
