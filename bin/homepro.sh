@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SFILES=`/usr/bin/git --git-dir /home/renat/.git --work-tree /home/renat status | /bin/grep "modified:" | /bin/sed 's/^.*modified://g'`
-[ -z $SFILES ] && exit
+[ -z "$SFILES" ] && exit
 
 NFILES=`echo "$SFILES" | wc -l`
 NOTIFY_ENV=`ps -e e | grep "/usr/libexec/notification-daemon"` 
