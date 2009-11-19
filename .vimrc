@@ -159,12 +159,12 @@ map! <F10> <Esc>:qa<CR>
 nnoremap <silent> <C-F10> :q!<CR>
 
 " Buffer next
-map <silent> <F11> :VSBufExplorer<CR>
-imap <silent> <F11> <Esc>:VSBufExplorer<CR>
+map <silent> <S-F11> :VSBufExplorer<CR>
+imap <silent> <S-F11> <Esc>:VSBufExplorer<CR>
 
 "File Expolore
-map <silent> <S-F11> :Vexplore!<CR>
-imap <silent> <S-F11> <Esc>:Vexplore!<CR>
+map <silent> <F11> :NERDTree<CR>
+imap <silent> <F11> <Esc>:NERDTree!<CR>
 
 " Hi 
 imap <S-F12> <Esc>:set<Space>hls!<CR>
