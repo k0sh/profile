@@ -99,7 +99,7 @@ free_space=1
 
 [Dirs]
 other_dir=/home/renat/inbox
-current_is_left=1
+current_is_left=0
 
 [New Left Panel]
 display=listing
