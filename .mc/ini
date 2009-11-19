@@ -71,9 +71,21 @@ mcview_remember_file_position=0
 editor_backup_extension=~
 editor_highlight=3
 
+kilobyte_si=0
+mouse_close_dialog=0
+skip_check_codeset=0
+editor_persistent_selections=1
+editor_cursor_beyond_eol=1
+editor_visible_tabs=1
+editor_visible_spaces=1
+editor_line_state=0
+editor_simple_statusbar=0
+auto_fill_mkdir_name=1
+reverse_files_only=1
+
 [Layout]
 equal_split=1
-first_panel_size=79
+first_panel_size=70
 message_visible=0
 keybar_visible=0
 xterm_title=0
@@ -122,8 +134,11 @@ panel_display_codepage=Other_8_bit
 [Misc]
 ftpfs_password=anonymous@
 ftp_proxy_host=gate
-display_codepage=Other_8_bit
+display_codepage=UTF-8
 ftp_codepage=Other_8_bit
+
+find_ignore_dirs=
+source_codepage=UTF-8
 
 [terminal:rxvt-unicode]
 complete=\e[Z
@@ -131,7 +146,12 @@ complete=\e[Z
 [Colors]
 base_color=normal=cyan,default:selected=black,cyan:marked=magenta,default:markselect=red,blue:errors=white,red:input=white,gray:reverse=cyan,default:gauge=black,magenta:menu=black,cyan:menusel=default,black:menuhot=yellow,cyan:menuhotsel=magenta,black:dnormal=black,cyan:dfocus=black,cyan:dhotnormal=yellow,cyan:dhotfocus=blue,green:helpnormal=black,cyan:helpitalic=cyan,blue:helpbold=black,cyan:helplink=green,blue:helpslink=blue,cyan:viewerunderline=yellow,lightgray:directory=white,default:executable=green,default:link=brightmagenta,default:stalelink=red,default:device=lightgray,default:special=cyan,default:core=red,default:editnormal=white,default:editbold=black,cyan:editmarked=cyan,black
 
+xterm=
+color_terminals=
+
+rxvt-unicode=
+
 [Panelize]
-Найти корректуры, отвергнутые командой patch=find . -name \*.rej -print
-Найти оригиналы (*.orig) после команды patch=find . -name \*.orig -print
-Найти программы с установленными SUID/SGID битами=find . \( \( -perm -04000 -a -perm +011 \) -o \( -perm -02000 -a -perm +01 \) \) -print
+Найти корректуры, отвергнутые командой patch=find . -name \\*.rej -print
+Найти оригиналы (*.orig) после команды patch=find . -name \\*.orig -print
+Найти программы с установленными SUID/SGID битами=find . \\( \\( -perm -04000 -a -perm +011 \\) -o \\( -perm -02000 -a -perm +01 \\) \\) -print
