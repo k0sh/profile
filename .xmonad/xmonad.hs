@@ -217,6 +217,7 @@ myManageHook = composeAll
     , className =? "Gimp"           --> doFloat
     , className =? "Firefox"        --> doF(W.shift "internet")
     , className =? "Pidgin"         --> doF(W.shift "im")
+    , className =? "Empathy"        --> doF(W.shift "im")
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore 
     , composeOne [isFullscreen -?> doFullFloat, transience]
