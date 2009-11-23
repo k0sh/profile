@@ -67,7 +67,7 @@ myWorkspaces    = ["main","devel","media","internet","im","misc"]
 -- Border colors for unfocused and focused windows, respectively.
 --
 myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#7a8199"
+myFocusedBorderColor = "#00ddaa"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -216,9 +216,11 @@ myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , className =? "Firefox"        --> doF(W.shift "internet")
+    , (className =? "Firefox" <&&> resource =? "Download") --> doFloat
     , className =? "Pidgin"         --> doF(W.shift "im")
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore 
+    , resource  =? "Do"		    --> doIgnore
     , composeOne [isFullscreen -?> doFullFloat, transience]
     ]
 
