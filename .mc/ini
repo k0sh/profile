@@ -86,8 +86,8 @@ filetype_mode=1
 free_space=1
 
 [Dirs]
-other_dir=/home/renat/inbox
-current_is_left=0
+other_dir=/home/renat/projects/django/ecomstore/static/images/products/main
+current_is_left=1
 
 [New Left Panel]
 display=listing
