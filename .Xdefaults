@@ -24,7 +24,8 @@ URxvt*background: #323d4c
 !URxvt*background: #0f1119 
 !URxvt*background: black
 !URxvt*foreground: green
-Rxvt*foreground: #7a8199
+!Rxvt*foreground: #7a8199
+URxvt*foreground: #7a99FF
 URxvt*scrollBar: false
 
 URxvt.tabbed.tabbar-bg: 81
