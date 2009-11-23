@@ -179,7 +179,7 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = smartBorders $ onWorkspace "im" (gridIM 0.25 pidginRoster) $ 
+myLayout = smartBorders $ onWorkspace "im" (gridIM 0.25 (pidginRoster `Or` empathyRoster))  $ 
 	Mirror tiled ||| tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
@@ -195,8 +195,9 @@ myLayout = smartBorders $ onWorkspace "im" (gridIM 0.25 pidginRoster) $
      delta   = 3/100
 
      -- Pidgin Roster
-     pidginRoster = And (ClassName "Pidgin") (Role "buddy_list")
-
+     rosters    = [empathyRoster, pidginRoster]
+     empathyRoster = (ClassName "Empathy") `And` (Title "Contact List")
+     pidginRoster = (ClassName "Pidgin") `And` (Title "Buddy List")
 ------------------------------------------------------------------------
 -- Window rules:
 
@@ -218,6 +219,7 @@ myManageHook = composeAll
     , className =? "Firefox"        --> doF(W.shift "internet")
     , (className =? "Firefox" <&&> resource =? "Download") --> doFloat
     , className =? "Pidgin"         --> doF(W.shift "im")
+    , className =? "Empathy"        --> doF(W.shift "im")
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore 
     , resource  =? "Do"		    --> doIgnore
