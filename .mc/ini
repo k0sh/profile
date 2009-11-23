@@ -70,7 +70,6 @@ horizontal_split=0
 mcview_remember_file_position=0
 editor_backup_extension=~
 editor_highlight=3
-
 kilobyte_si=0
 mouse_close_dialog=0
 skip_check_codeset=0
@@ -98,7 +97,7 @@ filetype_mode=1
 free_space=1
 
 [Dirs]
-other_dir=/home/renatn/inbox
+other_dir=/home/renat
 current_is_left=1
 
 [New Left Panel]
@@ -134,9 +133,8 @@ panel_display_codepage=Other_8_bit
 [Misc]
 ftpfs_password=anonymous@
 ftp_proxy_host=gate
-display_codepage=UTF-8
+display_codepage=Other_8_bit
 ftp_codepage=Other_8_bit
-
 find_ignore_dirs=
 source_codepage=UTF-8
 
@@ -145,10 +143,8 @@ complete=\e[Z
 
 [Colors]
 base_color=normal=cyan,default:selected=black,cyan:marked=magenta,default:markselect=red,blue:errors=white,red:input=white,gray:reverse=cyan,default:gauge=black,magenta:menu=black,cyan:menusel=default,black:menuhot=yellow,cyan:menuhotsel=magenta,black:dnormal=black,cyan:dfocus=black,cyan:dhotnormal=yellow,cyan:dhotfocus=blue,green:helpnormal=black,cyan:helpitalic=cyan,blue:helpbold=black,cyan:helplink=green,blue:helpslink=blue,cyan:viewerunderline=yellow,lightgray:directory=white,default:executable=green,default:link=brightmagenta,default:stalelink=red,default:device=lightgray,default:special=cyan,default:core=red,default:editnormal=white,default:editbold=black,cyan:editmarked=cyan,black
-
 xterm=
 color_terminals=
-
 rxvt-unicode=
 
 [Panelize]
