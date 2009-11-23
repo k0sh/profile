@@ -16,6 +16,7 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.NoBorders
 import XMonad.Layout.IM
 import XMonad.Layout.PerWorkspace
+import XMonad.Layout.ToggleLayouts
 
 import System.Exit
 
@@ -62,7 +63,7 @@ myNumlockMask   = mod2Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = ["main","devel","media","internet","im","misc"]
+myWorkspaces    = ["main","devel","media","internet","im","misc","fullscreen"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -122,6 +123,9 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
     -- Shrink the master area
     , ((modMask,               xK_h     ), sendMessage Shrink)
 
+    -- Toggle focused window fullscreen
+    , ((modMask,               xK_m     ), sendMessage (Toggle "Full"))
+
     -- Expand the master area
     , ((modMask,               xK_l     ), sendMessage Expand)
 
@@ -179,8 +183,8 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = smartBorders $ onWorkspace "im" (gridIM 0.25 (pidginRoster `Or` empathyRoster))  $ 
-	Mirror tiled ||| tiled ||| Full
+myLayout = onWorkspace "fullscreen" (Mirror tiled) $ toggleLayouts (noBorders Full) $ avoidStruts (smartBorders $ onWorkspace "im" (gridIM 0.25 (pidginRoster `Or` empathyRoster))  $ 
+	Mirror tiled ||| tiled ||| Full)
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -270,7 +274,7 @@ main =
         , workspaces         = myWorkspaces
         , normalBorderColor  = myNormalBorderColor
         , focusedBorderColor = myFocusedBorderColor
-        , layoutHook         = ewmhDesktopsLayout $ avoidStruts myLayout
+        , layoutHook         = ewmhDesktopsLayout $ myLayout 
 	, logHook	     = ewmhDesktopsLogHook
 	}
 
