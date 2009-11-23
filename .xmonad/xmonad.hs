@@ -17,6 +17,7 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.IM
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.ToggleLayouts
+import qualified XMonad.Layout.Tabbed as Tab
 
 import System.Exit
 
@@ -183,25 +184,34 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = onWorkspace "fullscreen" (Mirror tiled) $ toggleLayouts (noBorders Full) $ avoidStruts (smartBorders $ onWorkspace "im" (gridIM 0.25 (pidginRoster `Or` empathyRoster))  $ 
-	Mirror tiled ||| tiled ||| Full)
-  where
-     -- default tiling algorithm partitions the screen into two panes
-     tiled   = Tall nmaster delta ratio
 
-     -- The default number of windows in the master pane
-     nmaster = 1
+fullscreenLayout = onWorkspace "fullscreen" (noBorders Full) 
 
-     -- Default proportion of screen occupied by master pane
-     ratio   = 1/2
+defaultLayout = Mirror tiled ||| tiled ||| Tab.simpleTabbed where
+	     -- default tiling algorithm partitions the screen into two panes
+	     tiled   = Tall nmaster delta ratio
 
-     -- Percent of screen to increment by when resizing panes
-     delta   = 3/100
+	     -- The default number of windows in the master pane
+	     nmaster = 1
 
-     -- Pidgin Roster
-     rosters    = [empathyRoster, pidginRoster]
-     empathyRoster = (ClassName "Empathy") `And` (Title "Contact List")
-     pidginRoster = (ClassName "Pidgin") `And` (Title "Buddy List")
+	     -- Default proportion of screen occupied by master pane
+	     ratio   = 1/2
+
+	     -- Percent of screen to increment by when resizing panes
+	     delta   = 3/100
+
+imLayout = onWorkspace "im" (gridIM 0.25 (pidginRoster `Or` empathyRoster)) where
+		-- Pidgin Roster
+		rosters       = [empathyRoster, pidginRoster]
+		empathyRoster = (ClassName "Empathy") `And` (Title "Contact List")
+		pidginRoster  = (ClassName "Pidgin") `And` (Title "Buddy List")
+
+myLayout = fullscreenLayout $ 
+		toggleLayouts (noBorders Full) $ avoidStruts $ smartBorders $ 
+		imLayout  $ 
+		onWorkspace "internet" (Tab.simpleTabbed) $
+		defaultLayout
+
 ------------------------------------------------------------------------
 -- Window rules:
 
