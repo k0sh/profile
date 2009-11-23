@@ -163,8 +163,8 @@ map <silent> <S-F11> :VSBufExplorer<CR>
 imap <silent> <S-F11> <Esc>:VSBufExplorer<CR>
 
 "File Expolore
-map <silent> <F11> :NERDTree<CR>
-imap <silent> <F11> <Esc>:NERDTree!<CR>
+map <silent> <F11> :NERDTreeToggle<CR>
+imap <silent> <F11> <Esc>:NERDTreeToggle!<CR>
 
 " Hi 
 imap <S-F12> <Esc>:set<Space>hls!<CR>
