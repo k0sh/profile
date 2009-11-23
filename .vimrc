@@ -5,10 +5,13 @@ set bs=2         " allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command line history
 set ruler		    " show the cursor position all the time
 set title
+set nu
 " set clipboard=unnamed
 
 set backupdir=~/.vim/tmp,/tmp
 set directory=~/.vim/tmp,/tmp
+
+set autochdir
 
 " In text files, always limit the width of text to 78 characters
 autocmd BufRead *.txt set tw=78
@@ -28,6 +31,9 @@ autocmd BufWritePost *.c,*.h silent !ctags -a -f .tags <afile>
 " Python support
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab ai
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType python setlocal makeprg=pylint\ --output-format=parseable\ --reports=n\ %
+autocmd FileType python setlocal efm=%f:%l:\ [%t]%m,%f:%l:%m
+
 let python_highlight_all = 1
 
 " HTML support
@@ -127,12 +133,6 @@ imap <S-F1> <Esc><c-w>]
 
 imap <S-Tab> <BS>
 
-" Selection
-inoremap <F3> <Esc>lv
-inoremap <S-F3> <Esc><S-v>
-nnoremap <F3> v
-nnoremap <S-F3> <S-v>
-
 " Close window
 "map <silent> <F4> :close<CR>
 "imap <silent> <F4> <Esc>:close<CR>
@@ -206,4 +206,12 @@ imap <silent> <C-w> <Esc>:bd<CR>
 " Save action
 map <silent> <C-s> :w<CR>
 imap <silent> <C-s> <Esc>:w<CR>
+
+set complete=""
+set complete+=.
+set complete+=k
+set complete+=b
+set complete+=t
+set completeopt-=preview
+set completeopt+=longest
 
