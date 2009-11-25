@@ -207,6 +207,9 @@ imap <silent> <C-w> <Esc>:bd<CR>
 map <silent> <C-s> :w<CR>
 imap <silent> <C-s> <Esc>:w<CR>
 
+" Select all
+map <silent> <C-a> <S-v><S-g>
+
 set complete=""
 set complete+=.
 set complete+=k
