@@ -97,8 +97,8 @@ filetype_mode=1
 free_space=1
 
 [Dirs]
-other_dir=/home/renat
-current_is_left=1
+other_dir=/home/renat/projects/Arkanoid/src
+current_is_left=0
 
 [New Left Panel]
 display=listing
