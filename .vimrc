@@ -88,7 +88,7 @@ set ignorecase		" When search ignore case
 set smartcase
 set completeopt-=preview
 
-set statusline=%t\ %y%m%r%w%h\ %l/%L(%p%%)%([%{Tlist_Get_Tagname_By_Line()}]%)
+"set statusline=%t\ %y%m%r%w%h\ %l/%L(%p%%)%([%{Tlist_Get_Tagname_By_Line()}]%)
 set laststatus=2
 set nocursorline
 
