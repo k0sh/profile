@@ -234,6 +234,7 @@ myManageHook = composeAll
     , (className =? "Firefox" <&&> resource =? "Download") --> doFloat
     , className =? "Pidgin"         --> doF(W.shift "im")
     , className =? "Empathy"        --> doF(W.shift "im")
+    , className =? "Gwibber"        --> doF(W.shift "im")
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore 
     , resource  =? "Do"		    --> doIgnore
