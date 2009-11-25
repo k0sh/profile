@@ -97,7 +97,7 @@ filetype_mode=1
 free_space=1
 
 [Dirs]
-other_dir=/home/renat/projects/Arkanoid/src
+other_dir=/home/renat/projects/django/ecomstore/catalog
 current_is_left=0
 
 [New Left Panel]
@@ -133,7 +133,7 @@ panel_display_codepage=Other_8_bit
 [Misc]
 ftpfs_password=anonymous@
 ftp_proxy_host=gate
-display_codepage=UTF-8
+display_codepage=Other_8_bit
 ftp_codepage=Other_8_bit
 find_ignore_dirs=
 source_codepage=UTF-8

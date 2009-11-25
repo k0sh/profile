@@ -194,6 +194,9 @@ imap <PageDown> <C-O><C-S-D><C-O><C-S-D>
 map g<Left>	:pop<cr>
 map g<Right>	:<C-]>
 
+map <C-h> 	:wincmd h<CR>
+map <C-l>	:wincmd l<CR>
+
 " Comment selected code as //
 map cc v:s!^!//!g <CR><CR>
 map cx v:s!^\s*//!!g <CR>v=<CR>
