@@ -72,7 +72,7 @@ editor_backup_extension=~
 editor_highlight=3
 kilobyte_si=0
 mouse_close_dialog=0
-skip_check_codeset=0
+skip_check_codeset=1
 editor_persistent_selections=1
 editor_cursor_beyond_eol=1
 editor_visible_tabs=1
@@ -133,7 +133,7 @@ panel_display_codepage=Other_8_bit
 [Misc]
 ftpfs_password=anonymous@
 ftp_proxy_host=gate
-display_codepage=Other_8_bit
+display_codepage=UTF-8
 ftp_codepage=Other_8_bit
 find_ignore_dirs=
 source_codepage=UTF-8
