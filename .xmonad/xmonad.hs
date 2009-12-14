@@ -17,6 +17,7 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.IM
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.ToggleLayouts
+import XMonad.Layout.Reflect
 import qualified XMonad.Layout.Tabbed as Tab
 
 import System.Exit
@@ -203,6 +204,9 @@ defaultLayout = Mirror tiled ||| tiled ||| Tab.simpleTabbed where
 	     -- Percent of screen to increment by when resizing panes
 	     delta   = 3/100
 
+gimpLayout = onWorkspace "misc" (withIM (0.25) (Role "gimp-toolbox") $
+	             reflectHoriz $ withIM (0.25) (Role "gimp-dock") Full)
+
 imLayout = onWorkspace "im" (gridIM 0.25 (pidginRoster `Or` empathyRoster)) where
 		-- Pidgin Roster
 		rosters       = [empathyRoster, pidginRoster]
@@ -211,7 +215,7 @@ imLayout = onWorkspace "im" (gridIM 0.25 (pidginRoster `Or` empathyRoster)) wher
 
 myLayout = fullscreenLayout $ 
 		toggleLayouts (noBorders Full) $ avoidStruts $ smartBorders $ 
-		imLayout  $ 
+		imLayout  $ gimpLayout $
 		onWorkspace "internet" (Tab.simpleTabbed) $
 		defaultLayout
 
@@ -235,6 +239,7 @@ myManageHook = composeAll
     , className =? "Gimp"           --> doFloat
     , className =? "Firefox"        --> doF(W.shift "internet")
     , (className =? "Firefox" <&&> resource =? "Download") --> doFloat
+    , className =? "Google-chrome"  --> doF(W.shift "internet")
     , className =? "Pidgin"         --> doF(W.shift "im")
     , className =? "Empathy"        --> doF(W.shift "im")
     , className =? "Gwibber"        --> doF(W.shift "im")
