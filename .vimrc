@@ -196,6 +196,8 @@ map g<Right>	:<C-]>
 
 map <C-h> 	:wincmd h<CR>
 map <C-l>	:wincmd l<CR>
+map <C-j> 	:wincmd j<CR>
+map <C-k>	:wincmd k<CR>
 
 " Comment selected code as //
 map cc v:s!^!//!g <CR><CR>
