@@ -469,7 +469,7 @@ type/^PDF
 
 # Djvu
 shell/.djvu
-	Open=(djview4 %f &)
+	Open=(evince %f &)
 
 
 # html
