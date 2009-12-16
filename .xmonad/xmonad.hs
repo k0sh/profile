@@ -245,7 +245,7 @@ myManageHook = composeAll
     , className =? "Gwibber"        --> doF(W.shift "im")
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore 
-    , resource  =? "Do"		    --> doIgnore
+    , resource  =? "/usr/lib/gnome-do/Do.exe"    --> doIgnore
     , composeOne [isFullscreen -?> doFullFloat, transience]
     ]
 
