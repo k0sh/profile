@@ -91,3 +91,7 @@ local
 projects
 opt
 private
+.xmonad/xmonad.o
+.xmonad/xmonad.hi
+.xmonad/xmonad.errors
+.xmonad/xmonad-i386-linux
