@@ -245,7 +245,7 @@ myManageHook = composeAll
     , className =? "Gwibber"        --> doF(W.shift "im")
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore 
-    , resource  =? "/usr/lib/gnome-do/Do.exe"    --> doIgnore
+    , resource  =? "Do"    	    --> doIgnore
     , composeOne [isFullscreen -?> doFullFloat, transience]
     ]
 
@@ -293,7 +293,7 @@ main =
         , workspaces         = myWorkspaces
         , normalBorderColor  = myNormalBorderColor
         , focusedBorderColor = myFocusedBorderColor
-        , layoutHook         = ewmhDesktopsLayout $ myLayout 
+        , layoutHook         = myLayout 
 	, logHook	     = ewmhDesktopsLogHook
 	}
 
