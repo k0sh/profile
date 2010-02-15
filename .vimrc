@@ -38,6 +38,7 @@ let python_highlight_all = 1
 
 " HTML support
 autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab ai
+autocmd FileType htmldjango setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab ai
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS

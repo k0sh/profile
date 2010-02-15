@@ -1,4 +1,6 @@
 set viminfo='20,\"50	" read/write a .viminfo file, don't store more
+
+autocmd BufEnter *.html setfiletype htmldjango
  
 if has("cscope") && filereadable("/usr/bin/cscope")
    set csprg=/usr/bin/cscope
