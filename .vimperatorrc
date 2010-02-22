@@ -2,6 +2,9 @@
 " Mappings
 map <BS> :back<CR>
 map s :bmarks! -tags=
+map <C-j> <C-d>
+map <C-k> <C-u>
+map i :open 
 
 " Options
 set guioptions=Br
