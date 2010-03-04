@@ -94,6 +94,10 @@ auto_save_setup_panels=1
 
 ignore_ftp_chattr_errors=true
 
+confirm_history_cleanup=1
+editor_show_right_margin=0
+mcview_eof=
+
 [Layout]
 equal_split=1
 first_panel_size=79
@@ -107,6 +111,8 @@ show_mini_info=1
 permission_mode=0
 filetype_mode=1
 free_space=1
+
+classic_progressbar=true
 
 [Dirs]
 other_dir=/home/renat/projects/django/ecomstore/catalog
@@ -147,8 +153,11 @@ ftpfs_password=anonymous@
 ftp_proxy_host=gate
 display_codepage=UTF-8
 ftp_codepage=Other_8_bit
-find_ignore_dirs=
 source_codepage=UTF-8
+
+timeformat_recent=%b %e %H:%M
+timeformat_old=%b %e  %Y
+autodetect_codeset=
 
 [terminal:rxvt-unicode]
 complete=\e[Z
@@ -158,6 +167,19 @@ base_color=normal=cyan,default:selected=black,cyan:marked=magenta,default:markse
 xterm=
 color_terminals=
 rxvt-unicode=
+
+[FindFile]
+ignore_dirs=
+file_case_sens=true
+file_shell_pattern=true
+file_find_recurs=true
+file_skip_hidden=false
+file_all_charsets=false
+content_case_sens=true
+content_regexp=false
+content_first_hit=false
+content_whole_words=false
+content_all_charsets=false
 
 [Panelize]
 Найти корректуры, отвергнутые командой patch=find . -name \\*.rej -print
