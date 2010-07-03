@@ -9,7 +9,7 @@ fi
 
 PATH=$PATH:$HOME/bin
 
-JDK_HOME=/opt/jdk1.6.0_17
+JDK_HOME=/opt/jdk1.6.0_20
 JAVA_HOME=$JDK_HOME/jre
 EDITOR=vim
 AWT_TOOLKIT=MToolkit
